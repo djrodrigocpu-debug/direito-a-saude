@@ -1,19 +1,22 @@
 /* ==========================================================
-   FONTES — auto-hospedadas (mesmas famílias do original).
-   Motivo: velocidade (sem DNS/TLS para 2 domínios externos) e
-   LGPD (o Google Fonts registra o IP do visitante antes de
-   qualquer consentimento). Variáveis: wght 400–600 / 400–700.
+   FONTES — auto-hospedadas em assets/fontes/ (arquivos reais,
+   conferidos). Motivo: velocidade (sem DNS/TLS para domínios
+   externos) e LGPD (o Google Fonts registraria o IP do visitante
+   antes de qualquer consentimento). Os url() abaixo são relativos
+   a ESTE arquivo CSS, que já está em assets/ — por isso apontam
+   para "fontes/…", não "assets/fontes/…".
+   Variáveis: wght 400–600 (Newsreader) / 400–700 (Albert Sans).
 ========================================================== */
 @font-face{
-  font-family:"Newsreader";src:url("assets/fontes/newsreader-roman.woff2") format("woff2");
+  font-family:"Newsreader";src:url("fontes/newsreader-roman.woff2") format("woff2");
   font-weight:400 600;font-style:normal;font-display:swap;
 }
 @font-face{
-  font-family:"Newsreader";src:url("assets/fontes/newsreader-italic.woff2") format("woff2");
+  font-family:"Newsreader";src:url("fontes/newsreader-italic.woff2") format("woff2");
   font-weight:400 600;font-style:italic;font-display:swap;
 }
 @font-face{
-  font-family:"Albert Sans";src:url("assets/fontes/albert-sans.woff2") format("woff2");
+  font-family:"Albert Sans";src:url("fontes/albert-sans.woff2") format("woff2");
   font-weight:400 700;font-style:normal;font-display:swap;
 }
 
