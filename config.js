@@ -27,7 +27,7 @@ window.CONFIG = {
 
   /* Domínio final deste site, sem https:// e sem barra.
      Vazio = o site publica sem canonical/og:url. */
-  dominio: "",
+  dominio: "saude.rodrigosouzafilho.adv.br",
 
   /* ---- Ligação entre os dois sites ----
      Endereço COMPLETO (com https://) do outro site depois de
