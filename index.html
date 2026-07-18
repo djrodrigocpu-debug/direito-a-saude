@@ -17,12 +17,12 @@
 <meta name="theme-color" content="#16352C">
 <meta name="author" content="Rodrigo Souza Filho">
 
+<meta name="twitter:card" content="summary">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Rodrigo Souza Filho — Advocacia">
 <meta property="og:title" content="O plano de saúde negou o tratamento que você precisa? | Dr. Rodrigo Souza Filho — Advocacia">
 <meta property="og:description" content="Negativas de cirurgia, medicamento, terapia ou internação podem ser questionadas judicialmente. Em situações urgentes, pode ser avaliado um pedido de liminar. Análise individual do caso.">
-<meta name="twitter:card" content="summary">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fontes/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fontes/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,7 +36,7 @@ Animações são só aprimoramento progressivo. */
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "Dr. Rodrigo Souza Filho — Advocacia em Direito à Saúde",
-  "description": "Ações judiciais contra planos de saúde: negativas de cobertura, medicamentos de alto custo, terapias, home care, urgência e emergência.",
+  "description": "Ações judiciais contra planos de saúde: negativas de cobertura, medicamentos de alto custo, terapias, home care, urgência e emergência, cancelamento de planos de saúde empresariais e continuidade de tratamento.",
   "areaServed": [
     "Curitiba",
     "Paraná",
@@ -52,6 +52,9 @@ Animações são só aprimoramento progressivo. */
     "Direito à Saúde",
     "Planos de Saúde",
     "Negativa de Cobertura",
+    "Cancelamento de Plano de Saúde Empresarial",
+    "Continuidade de Tratamento",
+    "Planos Empresariais com Poucos Beneficiários",
     "Liminar",
     "Direito do Consumidor"
   ],
@@ -97,6 +100,22 @@ Animações são só aprimoramento progressivo. */
     },
     {
       "@type": "Question",
+      "name": "Meu plano empresarial familiar pode ser cancelado sem explicação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos contratos empresariais com menos de 30 beneficiários, a operadora deve apresentar uma motivação idônea para a rescisão. A validade do cancelamento depende do contrato, da justificativa, das notificações e das circunstâncias concretas. Por isso, um aviso genérico ou recebido durante tratamento médico merece análise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O plano pode ser cancelado durante um tratamento de câncer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mesmo quando a rescisão de um plano coletivo é formalmente válida, o STJ reconhece a obrigação de preservar a assistência ao beneficiário internado ou em tratamento de doença grave até a efetiva alta, desde que as mensalidades continuem sendo integralmente pagas. A aplicação dessa proteção depende da situação médica e contratual."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Medicamento \"fora do rol da ANS\" pode ser conseguido?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -127,12 +146,13 @@ Animações são só aprimoramento progressivo. */
 <a class="pular" href="#inicio">Pular para o conteúdo</a>
 <header class="topo" id="topo">
   <div class="container topo-inner">
-    <a class="marca" href="index.html" aria-label="Início — Dr. Rodrigo Souza Filho, advocacia">
+    <a class="marca" href="/" aria-label="Início — Dr. Rodrigo Souza Filho, advocacia">
       <span class="marca-mono" aria-hidden="true">RSF</span>
       <span class="marca-nome">Rodrigo Souza Filho<small>Advocacia · Direito à Saúde</small></span>
     </a>
     <nav class="nav" aria-label="Navegação principal">
       <a href="#situacoes">Situações</a>
+      <a href="#cancelamento-plano-empresarial">Cancelamento</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#sobre">Sobre</a>
       <a href="#duvidas">Dúvidas</a>
@@ -217,7 +237,7 @@ Animações são só aprimoramento progressivo. */
       <li class="card reveal">
         <span class="card-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 9 8l4 5 3-4 5 8"/><path d="M3 21h18"/></svg></span>
         <h3>Reajustes abusivos</h3>
-        <p>Aumentos fora de padrão em planos coletivos ou por faixa etária, e cancelamento unilateral do contrato.</p>
+        <p>Reajustes de planos coletivos, aumentos por faixa etária e percentuais desproporcionais ou aplicados sem transparência.</p>
       </li>
       <li class="card reveal">
         <span class="card-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14l2 2 4-5"/><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v3h8V3"/></svg></span>
@@ -225,6 +245,34 @@ Animações são só aprimoramento progressivo. */
         <p>Reembolsos recusados, pagos parcialmente ou muito abaixo do previsto em contrato.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- ================= DESTAQUE: CANCELAMENTO DE PLANO EMPRESARIAL ================= -->
+<section class="secao destaque-secao" id="cancelamento-plano-empresarial" aria-labelledby="cancelamentoTitulo">
+  <div class="container">
+    <div class="destaque-cancelamento reveal">
+      <div class="destaque-cancelamento__conteudo">
+        <p class="eyebrow eyebrow--right">Plano empresarial familiar</p>
+        <h2 id="cancelamentoTitulo">Seu plano foi cancelado justamente quando sua família <em>mais precisava</em>?</h2>
+        <p class="destaque-cancelamento__emocional">Muitas famílias contratam um plano empresarial por meio de um pequeno CNPJ, com três ou quatro beneficiários. Quando surge um câncer, uma internação ou outro tratamento de alto custo, o cancelamento pode deixar o paciente desamparado no momento de maior fragilidade.</p>
+        <p class="destaque-cancelamento__juridico">Em contratos empresariais com menos de 30 beneficiários, a operadora deve apresentar uma motivação idônea para a rescisão. Além disso, o paciente internado ou em tratamento de doença grave possui proteção específica para a continuidade da assistência.</p>
+        <div class="destaque-cancelamento__acoes">
+          
+          <a class="btn btn-contorno" href="/cancelamento-plano-saude-empresarial">Entenda quando o cancelamento pode ser questionado</a>
+        </div>
+        <p class="destaque-cancelamento__nota">A validade do cancelamento depende do contrato, da justificativa apresentada, do número de beneficiários, das notificações enviadas e do tratamento em andamento. Cada situação exige análise individual. Saiba mais sobre <a href="/cancelamento-plano-saude-empresarial">plano de saúde empresarial cancelado durante o tratamento</a>.</p>
+      </div>
+      <aside class="destaque-cancelamento__sinais" aria-label="Sinais que merecem atenção no cancelamento do plano">
+        <p class="destaque-cancelamento__sinais-rotulo">Sinais que merecem atenção</p>
+        <ul>
+          <li>Plano contratado por CNPJ familiar</li>
+          <li>Três, quatro ou poucas pessoas no contrato</li>
+          <li>Câncer ou tratamento de alto custo em andamento</li>
+          <li>Aviso de cancelamento, exclusão ou não renovação</li>
+        </ul>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -340,6 +388,14 @@ Animações são só aprimoramento progressivo. */
         <p>Não. Buscar a Justiça é um direito seu, e retaliação por isso é ilegal. Cancelamentos e restrições indevidas em razão do processo também podem ser questionados judicialmente.</p>
       </details>
       <details class="reveal">
+        <summary>Meu plano empresarial familiar pode ser cancelado sem explicação?<span class="mais" aria-hidden="true">+</span></summary>
+        <p>Nos contratos empresariais com menos de 30 beneficiários, a operadora deve apresentar uma motivação idônea para a rescisão. A validade do cancelamento depende do contrato, da justificativa, das notificações e das circunstâncias concretas. Por isso, um aviso genérico ou recebido durante tratamento médico merece análise.</p>
+      </details>
+      <details class="reveal">
+        <summary>O plano pode ser cancelado durante um tratamento de câncer?<span class="mais" aria-hidden="true">+</span></summary>
+        <p>Mesmo quando a rescisão de um plano coletivo é formalmente válida, o STJ reconhece a obrigação de preservar a assistência ao beneficiário internado ou em tratamento de doença grave até a efetiva alta, desde que as mensalidades continuem sendo integralmente pagas. A aplicação dessa proteção depende da situação médica e contratual.</p>
+      </details>
+      <details class="reveal">
         <summary>Medicamento "fora do rol da ANS" pode ser conseguido?<span class="mais" aria-hidden="true">+</span></summary>
         <p>Em muitos casos, sim. A legislação atual permite a cobertura de tratamentos fora do rol quando há comprovação de eficácia e indicação médica fundamentada, entre outros critérios. É uma das análises mais técnicas — e mais comuns — nessa área.</p>
       </details>
@@ -370,8 +426,8 @@ Animações são só aprimoramento progressivo. */
       <div>
         <p>Curitiba — Paraná</p>
         <!-- URL do outro site vazia em config.js: o link não é publicado (nenhum link vazio ou relativo quebrado é gerado). -->
-        <p style="margin-top:8px"><a href="privacidade.html">Política de privacidade</a> ·
-          <a href="privacidade.html#cookies">Preferências de cookies</a></p>
+        <p style="margin-top:8px"><a href="/privacidade">Política de privacidade</a> ·
+          <a href="/privacidade#cookies">Preferências de cookies</a></p>
       </div>
     </div>
     <p class="rodape-aviso">Este site tem caráter exclusivamente informativo, em conformidade com o Código de Ética e Disciplina da OAB e com o Provimento nº 205/2021. As informações aqui apresentadas não constituem promessa de resultado: cada caso é analisado individualmente e o desfecho depende de circunstâncias próprias. © 2026 Rodrigo Souza Filho — Advocacia.</p>
@@ -383,7 +439,7 @@ Animações são só aprimoramento progressivo. */
 <div class="cookies" id="cookiesBanner" role="dialog" aria-labelledby="cookiesTit" hidden>
   <h2 class="serif" id="cookiesTit">Cookies e medição</h2>
   <p>Este site usa medição de audiência para saber quais anúncios trazem pessoas até aqui. Nada é medido antes
-    de você escolher. Dá para mudar de ideia depois, na <a href="privacidade.html#cookies">política de
+    de você escolher. Dá para mudar de ideia depois, na <a href="/privacidade#cookies">política de
     privacidade</a>.</p>
   <div class="cookies-opcoes" id="cookiesOpcoes" hidden>
     <div class="cookies-opcao">

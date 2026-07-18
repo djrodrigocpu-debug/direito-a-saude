@@ -293,11 +293,16 @@
     var OBRIGATORIOS = ["nome", "cidade", "assunto", "mensagem"];
     var ROTULOS = { nome: "seu nome", cidade: "sua cidade",
                     assunto: "o tipo de problema", mensagem: "uma descrição da situação" };
+    /* Mesmos limites dos atributos maxlength do HTML. O maxlength já
+       impede digitar além; aqui o corte vale também para colagem e
+       para navegadores que ignorem o atributo. */
+    var LIMITES = { nome: 80, cidade: 100, mensagem: 1200 };
 
     function campo(nome) { return form.querySelector('[name="' + nome + '"]'); }
     function valor(nome) {
       var el = campo(nome);
-      return el && el.value ? el.value.trim() : "";
+      var v = el && el.value ? el.value.trim() : "";
+      return LIMITES[nome] ? v.slice(0, LIMITES[nome]) : v;
     }
 
     function mostrarErro(texto) {
@@ -371,8 +376,9 @@
       registrarLead({ nome: valor("nome"), cidade: valor("cidade"), assunto: valor("assunto"), campanha: dadosCampanha() });
 
       window.open(link, "_blank", "noopener");
-      /* a página de obrigado explica que ainda falta tocar em enviar */
-      setTimeout(function () { location.href = "obrigado.html"; }, 250);
+      /* a página de obrigado explica que ainda falta tocar em enviar
+         (URL limpa: o Vercel serve /obrigado com cleanUrls) */
+      setTimeout(function () { location.href = "/obrigado"; }, 250);
     });
   }
 

@@ -59,15 +59,47 @@ build do Vercel e no console do navegador (F12).
 
 | Arquivo/pasta | Papel |
 |---|---|
-| `config.js` | **o único arquivo que você edita** |
+| `config.js` | **o único arquivo que você edita** — todos os dados de contato ficam só aqui |
 | `modelos/` | modelos das páginas; o build monta o site a partir deles |
 | `aplicar-config.js` | o script de build (o Vercel roda; você não precisa) |
-| `index.html`, `privacidade.html`, `obrigado.html` | páginas geradas — não edite: o build sobrescreve |
-| `public/` | criada pelo build; é o que o Vercel publica |
-| `assets/` | CSS, JavaScript, fontes e favicon |
+| `index.html`, `cancelamento-plano-saude-empresarial.html`, `privacidade.html`, `obrigado.html` | páginas geradas — não edite: o build sobrescreve |
+| `public/` | criada pelo build; é o que o Vercel publica (inclui `robots.txt` e `sitemap.xml`) |
+| `assets/` | CSS, JavaScript, fontes, favicon e imagens de Open Graph |
 
-Quer conferir localmente antes de publicar? Opcional: `npm run build` na
-pasta do projeto e abra o `index.html`. Mas o fluxo normal dispensa isso.
+## Páginas e URLs limpas
+
+O site tem quatro páginas, todas geradas a partir de `modelos/`:
+
+- `/` — página inicial (Direito à Saúde em geral, com a seção de destaque
+  sobre cancelamento de plano empresarial familiar);
+- `/cancelamento-plano-saude-empresarial` — página específica sobre o
+  cancelamento de planos empresariais pequenos durante tratamento;
+- `/privacidade` e `/obrigado` — páginas de apoio (não indexáveis).
+
+O `vercel.json` usa `cleanUrls`, então **as URLs públicas não têm `.html`**
+e todos os links internos, canonicals e `og:url` já são gerados assim.
+Nunca insira dados de contato diretamente nos HTML: use apenas `config.js`.
+
+## robots.txt e sitemap.xml
+
+O build gera os dois automaticamente dentro de `public/`:
+
+- `robots.txt` sempre existe (`User-agent: * / Allow: /`). A linha
+  `Sitemap:` só entra quando o campo `dominio` está preenchido.
+- `sitemap.xml` só é criado quando há domínio configurado, e lista apenas
+  as páginas indexáveis (`/` e `/cancelamento-plano-saude-empresarial`).
+  `/obrigado` e `/privacidade` ficam de fora por serem `noindex`.
+
+## Como conferir o build
+
+Opcional — o fluxo normal dispensa isso, pois o Vercel roda tudo sozinho:
+
+1. `npm run build` na pasta do projeto (só precisa do Node 18+, sem instalar nada);
+2. confira no terminal os `ok` de cada página e os avisos de campos vazios;
+3. o resultado publicável fica em `public/`. Como os links usam URLs limpas
+   (`/privacidade`, `/obrigado`), abrir o arquivo direto no navegador
+   (file://) não resolve os links entre páginas — para navegar localmente,
+   sirva a pasta com um servidor estático (ex.: `npx serve public`).
 
 ## Conformidade que o build garante
 
