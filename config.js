@@ -23,7 +23,7 @@ window.CONFIG = {
   telefoneExibicao: "",
 
   /* E-mail de contato. Vazio = nenhum e-mail é exibido. */
-  email: "",
+  email: "saude@rodrigosouzafilho.adv.br",
 
   /* Domínio final deste site, sem https:// e sem barra.
      Vazio = o site publica sem canonical/og:url. */
