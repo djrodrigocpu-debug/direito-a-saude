@@ -34,7 +34,7 @@ window.CONFIG = {
      publicado no Vercel. Enquanto estiver vazio, o link "Outra
      área de atuação" não aparece no rodapé. */
   urlDireitoSaude: "",
-  urlRegularizacaoVeicular: "",
+  urlRegularizacaoVeicular: "https://carrosantigos.rodrigosouzafilho.adv.br",
 
   /* ---- Google Ads ----
      ID da conta, no formato AW- seguido dos dígitos da conta.
