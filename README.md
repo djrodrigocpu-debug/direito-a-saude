@@ -1,4 +1,4 @@
-# Direito à Saúde — Rodrigo Souza Filho (OAB/PR 95.516)
+# Direito à Saúde — Rodrigo Augusto Wagner de Souza Filho (OAB/PR 95.516)
 
 Landing page estática para campanha de Google Ads. HTML, CSS e um arquivo de
 JavaScript — sem framework. **Você nunca precisa abrir terminal**: o Vercel

@@ -94,7 +94,7 @@ p.muted,.muted{color:var(--suave)}
 .marca-mono{
   width:40px;height:40px;border-radius:9px;display:grid;place-items:center;
   background:linear-gradient(160deg,var(--latao-claro),var(--latao) 55%,var(--latao-escuro));
-  font-family:var(--serif);font-weight:600;font-size:1.05rem;color:#3E2F14;
+  font-family:var(--serif);font-weight:600;font-size:.62rem;letter-spacing:.01em;color:#3E2F14;
   text-shadow:0 1px 0 rgba(255,255,255,.4);
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 2px 6px rgba(22,53,44,.18);
 }
@@ -150,8 +150,8 @@ p.muted,.muted{color:var(--suave)}
   transform:rotate(-1.2deg);
 }
 .placa *{color:#3E2F14;text-shadow:0 1px 0 rgba(255,255,255,.35)}
-.placa-mono{font-family:var(--serif);font-size:2rem;font-weight:600;letter-spacing:.06em}
-.placa-nome{font-family:var(--serif);font-size:1.45rem;font-weight:500;margin-top:6px}
+.placa-mono{font-family:var(--serif);font-size:1.4rem;font-weight:600;letter-spacing:.06em}
+.placa-nome{font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-top:6px}
 .placa-fio{width:56px;height:1px;background:rgba(62,47,20,.45);margin:14px auto;box-shadow:0 1px 0 rgba(255,255,255,.35)}
 .placa-tit{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
 .placa-area{font-family:var(--serif);font-style:italic;font-size:1.02rem;margin-top:10px}
@@ -224,7 +224,7 @@ p.muted,.muted{color:var(--suave)}
 .sobre-lista svg{width:18px;height:18px;color:var(--latao);flex:none;margin-top:5px}
 .sobre-lista strong{color:var(--pinheiro);font-weight:600}
 /* Para usar uma FOTO no lugar da placa: substitua a <div class="placa">
-   por <img src="sua-foto.jpg" alt="Dr. Rodrigo Souza Filho" style="width:100%;border-radius:12px"> */
+   por <img src="sua-foto.jpg" alt="Dr. Rodrigo Augusto Wagner de Souza Filho" style="width:100%;border-radius:12px"> */
 @media(max-width:920px){.sobre-grid{grid-template-columns:1fr;gap:40px}}
 
 /* FAQ */
@@ -475,8 +475,6 @@ p.muted,.muted{color:var(--suave)}
   .docs{padding:24px 20px}
   .faq summary{font-size:.98rem;gap:10px}
   .faq details p{padding-right:24px}
-  .marca-nome{font-size:1rem}
-  .topo-inner{height:64px}
 }
 
 /* ============================================================
@@ -616,3 +614,14 @@ p.muted,.muted{color:var(--suave)}
 .u-mt-8{margin-top:8px!important}
 .u-p-0{padding:0!important}
 .u-pt-0{padding-top:0!important}
+
+/* ---------- nome completo na barra do topo (celular) ----------
+   "Rodrigo Augusto Wagner de Souza Filho" ocupa duas linhas ao lado do
+   botão; a barra cresce para 84px e o texto encolhe um pouco. ---------- */
+@media(max-width:860px){
+  .topo-inner{height:84px}
+  .marca-nome{font-size:.9rem;line-height:1.12}
+  .marca-nome small{font-size:.56rem;letter-spacing:.1em;margin-top:2px}
+  .hero{padding-top:118px}
+  .marca-mono{width:36px;height:36px;font-size:.56rem}
+}
