@@ -263,7 +263,9 @@ p.muted,.muted{color:var(--suave)}
 
 /* footer */
 .rodape{background:var(--pinheiro-2);color:rgba(237,243,237,.78);padding:56px 0 40px;font-size:.9rem}
-.rodape a{color:#EDF3ED;text-decoration:none;border-bottom:1px solid rgba(201,172,108,.5)}
+/* Opacidade do sublinhado subiu de .5 para .65: a .5 o contraste do fio contra
+   o fundo do rodapé media 2,87:1, abaixo do mínimo de 3:1 para elemento gráfico. */
+.rodape a{color:#EDF3ED;text-decoration:none;border-bottom:1px solid rgba(201,172,108,.65)}
 .rodape a:hover{border-bottom-color:var(--latao-claro)}
 .rodape-grid{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;margin-bottom:34px}
 .rodape .marca-nome{color:#EDF3ED}
@@ -587,6 +589,11 @@ p.muted,.muted{color:var(--suave)}
 .band--cta h2{color:#EDF3ED;font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.28}
 .band--cta p{margin-top:16px;color:rgba(237,243,237,.8);max-width:46em}
 .band--cta .btn{margin-top:28px}
+/* Link comum dentro da faixa escura. Sem esta regra ele herda a cor de link do
+   corpo, que é escura, e some no fundo escuro — o mesmo tipo de armadilha que
+   apagou os botões de WhatsApp em 18/09/2026. */
+.band--cta a:not(.btn){color:var(--latao-claro);text-decoration:underline;text-underline-offset:3px}
+.band--cta a:not(.btn):hover{color:#fff}
 .btn-invertido{background:var(--porcelana);color:var(--pinheiro)}
 .btn-invertido:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.3)}
 

@@ -34,7 +34,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fontes/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fontes/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/estilo.css?v=476f183d">
+<link rel="stylesheet" href="assets/estilo.css?v=d70f873a">
 <script>/* modo-JS com failsafe: se assets/app.js não confirmar que rodou
 (bloqueio, erro de rede), a classe sai e todo o conteúdo fica visível.
 Animações são só aprimoramento progressivo. */
@@ -439,11 +439,11 @@ Animações são só aprimoramento progressivo. */
 <!-- A seção de contato inteira (inclusive o formulário, cuja única ação é
      abrir o WhatsApp) só é publicada quando há número em config.js. -->
 <!-- ================= CONTATO ================= -->
-<section class="secao contato" id="contato-final">
+<section class="secao contato" id="contato-final" aria-labelledby="tituloContato">
   <div class="container contato-grid">
     <div class="reveal">
       <p class="eyebrow eyebrow--right">Fale com o advogado</p>
-      <h2>Conte o seu caso.<br>A análise é <em>individual</em>.</h2>
+      <h2 id="tituloContato">Conte o seu caso.<br>A análise é <em>individual</em>.</h2>
       <h3 class="contato-titulo u-mt-26">Canais de atendimento</h3>
       <div class="contato-alt">
         <p class="muted">O caminho mais direto é o WhatsApp: a mensagem chega ao advogado, sem intermediários.</p>
@@ -557,6 +557,6 @@ Animações são só aprimoramento progressivo. */
 </div>
 
 <script src="config.js"></script>
-<script src="assets/app.js?v=0ee898d3" defer></script>
+<script src="assets/app.js?v=2df83206" defer></script>
 </body>
 </html>
